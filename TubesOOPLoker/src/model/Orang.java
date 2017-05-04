@@ -1,55 +1,50 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Data;
-
-import java.util.Date;
+package model;
 
 /**
+ * File Description
  *
- * @author Aldika W
+ * @author Afnizar Nur Ghifari <afnizarhilmi@gmail.com>
+ * @since Apr 29, 2017
  */
+import java.util.Date;
+
 abstract public class Orang {
-    // Deklarasi variable
+
     private int id;
     private String nama;
-    private String jk;
+    private String jKelamin;
     private String tempatLahir;
     private Date tglLahir;
     private String noTelp;
     private String email;
-    private String password;
+    private String pass;
 
-    // Constructor
-    public Orang(int id, String nama, String jk, String tempatLahir, Date tglLahir, String noTelp, String email, String Password){
+    public Orang(int id, String nama, String jKelamin, String tempatLahir, Date tglLahir, String noTelp, String email, String pass) {
         this.id = id;
         this.nama = nama;
-        this.jk = jk;
+        this.jKelamin = jKelamin;
         this.tempatLahir = tempatLahir;
         this.tglLahir = tglLahir;
         this.noTelp = noTelp;
         this.email = email;
-        this.password = Password;
+        this.pass = pass;
     }
-    
-    public Orang(int id, String nama, String email, String Password){
+
+    public Orang(int id, String nama, String email, String pass) {
         this.id = id;
         this.nama = nama;
         this.email = email;
-        this.password = Password;
+        this.pass = pass;
     }
-    
-    public Orang(int id, String nama, String noTelp, String email, String Password){
+
+    public Orang(int id, String nama, String noTelp, String email, String pass) {
         this.id = id;
         this.nama = nama;
         this.noTelp = noTelp;
         this.email = email;
-        this.password = Password;
+        this.pass = pass;
     }
-    
-    // Getter and Setter
+
     public int getId() {
         return id;
     }
@@ -57,7 +52,7 @@ abstract public class Orang {
     public void setId(int id) {
         this.id = id;
     }
-    
+
     public String getNama() {
         return nama;
     }
@@ -66,12 +61,12 @@ abstract public class Orang {
         this.nama = nama;
     }
 
-    public String getJk() {
-        return jk;
+    public String getjKelamin() {
+        return jKelamin;
     }
 
-    public void setJk(String jk) {
-        this.jk = jk;
+    public void setjKelamin(String jKelamin) {
+        this.jKelamin = jKelamin;
     }
 
     public String getTempatLahir() {
@@ -105,13 +100,12 @@ abstract public class Orang {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    public String getPassword() {
-        return password;
+
+    public String getPass() {
+        return pass;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPass(String pass) {
+        this.pass = pass;
     }
-    
 }
