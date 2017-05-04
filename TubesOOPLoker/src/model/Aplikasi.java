@@ -104,5 +104,5 @@ public class Aplikasi {
     
     public void addPelamar(Pelamar p){
         daftarPelamar.add(p);
-    }
+    }  
 }
