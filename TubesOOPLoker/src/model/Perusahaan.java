@@ -41,6 +41,10 @@ public class Perusahaan extends Orang {
         };
     }
 
+    public Lowongan getDaftarLowongan(int id) {
+        return daftarLowongan.get(id);
+    }
+    
     public List<Lowongan> getDaftarLowongan() {
         if (daftarLowongan.isEmpty()) {
             return null;
@@ -102,7 +106,7 @@ public class Perusahaan extends Orang {
         Lowongan lo = new Lowongan(totalLowongan++, judul, deskripsi, deadline);
         daftarLowongan.add(lo);
     }
-    
+
     public void updateLowongan(int id, String judul, String deskripsi, Date deadline) {
         Lowongan lo = new Lowongan(id, judul, deskripsi, deadline);
         daftarLowongan.add(lo);

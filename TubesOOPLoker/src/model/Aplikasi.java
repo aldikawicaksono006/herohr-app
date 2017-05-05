@@ -35,19 +35,17 @@ public class Aplikasi {
             String tgl = "08-12-2017";
             dateData = dateFormat.parse(tgl);
             judul = "UI/UX Designer";
-            deskripsi = "Work closely with the Product Team to propose new solutions to complex user-centered design problems\n" +
-            "Identify design problems and devise elegant solutions.";
+            deskripsi = "Work closely with the Product Team to propose new solutions to complex user-centered design problems\n"
+                    + "Identify design problems and devise elegant solutions.";
             daftarPerusahaan.get(0).createLowongan(judul, deskripsi, dateData);
-            
+
             tgl = "02-02-2017";
+            dateData = dateFormat.parse(tgl);
             judul = "Senior Software Engineer ";
             deskripsi = "Designing, developing and improving the quality of Tripvisto’s tech and product.";
-            dateData = dateFormat.parse(tgl);
             daftarPerusahaan.get(0).createLowongan(judul, deskripsi, dateData);
-            tgl = "02-09-2017";
-            dateData = dateFormat.parse(tgl);
-            
-            Pelamar a = new Pelamar(daftarPelamar.size()-1, "Afnizar", "1","1");
+
+            Pelamar a = new Pelamar(daftarPelamar.size() - 1, "Afnizar", "1", "1");
             addPelamar(a);
         } catch (ParseException e) {
             e.printStackTrace();
@@ -65,13 +63,22 @@ public class Aplikasi {
             return daftarPerusahaan;
         }
     }
-    
+
     public List<Pelamar> getDaftarPelamar() {
         if (daftarPelamar.isEmpty()) {
             return null;
         } else {
             return daftarPelamar;
         }
+    }
+    
+     public Pelamar getDaftarPelamar(int id) {
+        return daftarPelamar.get(id);
+    }
+    
+    
+    public BerkasLamaran lihatBerkas(Pelamar p){
+        return p.getB();
     }
 
     public Perusahaan loginPerusahaan(String email, String pass) {
@@ -87,7 +94,7 @@ public class Aplikasi {
         }
         return null;
     }
-    
+
     public Pelamar loginPelamar(String email, String pass) {
         int i = 0;
         boolean find = false;
@@ -101,8 +108,12 @@ public class Aplikasi {
         }
         return null;
     }
-    
-    public void addPelamar(Pelamar p){
+
+    public void addPelamar(Pelamar p) {
         daftarPelamar.add(p);
-    }  
+    }
+
+    public Object getDaftarLowongan() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

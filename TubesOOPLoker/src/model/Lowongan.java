@@ -47,7 +47,6 @@ public class Lowongan {
     public void setJudul(String judul) {
         this.judul = judul;
     }
-    
 
     public void setIdLowongan(int idLowongan) {
         this.idLowongan = idLowongan;
@@ -61,12 +60,8 @@ public class Lowongan {
         this.deadline = deadline;
     }
 
-    public List<BerkasLamaran> getBerkasMasuk() {
-        if (berkasMasuk.isEmpty()) {
-            return null;
-        } else {
-            return berkasMasuk;
-        }
+    public BerkasLamaran getBerkasMasuk(int index) {
+        return berkasMasuk.get(index);
     }
 
     public BerkasLamaran getBerkasMasukbyid(int id) {
@@ -80,16 +75,24 @@ public class Lowongan {
         this.berkasMasuk = berkasMasuk;
     }
 
+    public BerkasLamaran getBerkasDiterima(int id) {
+        return berkasDiterima.get(id);
+    }
+
+    public List<BerkasLamaran> getBerkasMasuk() {
+        if (berkasMasuk.isEmpty()) {
+            return null;
+        } else {
+            return berkasMasuk;
+        }
+    }
+
     public List<BerkasLamaran> getBerkasDiterima() {
         if (berkasDiterima.isEmpty()) {
             return null;
         } else {
             return berkasDiterima;
         }
-    }
-
-    public BerkasLamaran getBerkasDiterimaByID(int id) {
-        return berkasDiterima.get(id);
     }
 
     public void setBerkasDiterima(List<BerkasLamaran> berkasDiterima) {
@@ -105,7 +108,7 @@ public class Lowongan {
     }
 
     public String toString() {
-        return "ID " + idLowongan 
+        return "ID " + idLowongan
                 + " Judul " + judul
                 + " Berkas Masuk " + berkasMasuk
                 + " , Berkas Diterima " + berkasDiterima
